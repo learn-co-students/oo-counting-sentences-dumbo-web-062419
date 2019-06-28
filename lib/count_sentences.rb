@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 
 class String
 
@@ -27,12 +27,12 @@ class String
   end
 
   def count_sentences
-      string = "This, well, is a sentence. This is too!! And so is this, I think? Woo..."
-      string.scan(/[^\.!?]+[\.!?]/).map(&:strip).count 
-      if string.count = 0
-        return 0
-      end
-    # binding.pry
-
+      #string = "This, well, is a sentence. This is too!! And so is this, I think? Woo..."
+      #string.scan(/[^\.!?]+[\.!?]/).map(&:strip).count 
+      #if string.count = 0
+       # return 0
+      #end
+      self.split(/[.?!]+(?=\s|\z)/).count
+   
   end
 end
